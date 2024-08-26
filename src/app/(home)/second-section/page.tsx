@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 interface Feature {
   name: string;
@@ -45,46 +46,36 @@ const features: Feature[] = [
 const SecondSection = () => {
   return (
     <div className="">
-      <div
-        className="
-lg:flex-row flex-col
-items-center
-flex  justify-center pb-10"
-      >
-        <div className="p-5 justify-center lg:w-1/2">
-          <div
-            className="
-                txt-grad
-                text-transparent
-                text-4xl
-                md:text-6xl
-                font-bold
-                pb-4
-                md:pb-10
-                
-                "
-          >
+      <div className="flex flex-col items-center justify-center pb-10 lg:flex-row">
+        <div className="justify-center p-5 lg:w-1/2">
+          <div className="txt-grad pb-4 text-4xl font-bold text-transparent md:pb-10 md:text-6xl">
             OPENZO USER APP
           </div>
 
-          <div className="text-lg md:text-2xl mb-8">
+          <div className="mb-8 text-lg md:text-2xl">
             Openzo user app is an all in one local commerce app where people can
             discover all the products and services available in their locality.
             Users have access to convenience of getting products delivered to
             home from local stores and restaurants at unbeatable prices. Users
             also have access to our P2P Marketplace features.
           </div>
-          <div className="flex gap-4 items-center">
-            <img
-              alt=""
-              // height={55}
-              // width={200}
-              className="object-contain  h-[72px] "
-              src={"/images/playstore.png"}
-            />
+          <div className="flex items-center gap-4">
+            <Link
+              href={
+                "https://play.google.com/store/apps/details?id=in.openzo.openzo"
+              }
+            >
+              <img
+                alt=""
+                // height={55}
+                // width={200}
+                className="h-[72px] object-contain"
+                src={"/images/playstore.png"}
+              />
+            </Link>
             {/* <button className="bg-kred text-white p-4 justify-center flex md:w-1/3 rounded-lg hover:bg-blue-600">
                 </button> */}
-            <button className="bg-kred text-white px-2 md:p-4 h-[55px] justify-center flex gap-2 rounded-lg hover:bg-blue-600 items-center">
+            <button className="flex h-[55px] items-center justify-center gap-2 rounded-lg bg-kred px-2 text-white hover:bg-blue-600 md:p-4">
               <span>Web App</span>
               <ExternalLink size={24} />
             </button>
@@ -98,36 +89,18 @@ flex  justify-center pb-10"
                 </video> */}
         <div className="">
           <img
-            className="rounded-xl md:max-w-[620px] h-auto mx-auto p-2"
+            className="mx-auto h-auto rounded-xl p-2 md:max-w-[620px]"
             // src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=918,h=1200,fit=crop/YbNyW78p3RCzrjv0/1-AGB4roLeR3SzEk3y.png"
             src="images/user-app.png"
           ></img>
         </div>
       </div>
-      <div className="flex-col items-center justify-center bg-blue-50 p-8 mb-2 md:mb-12">
-        <div
-          className="
-                text-3xl
-                flex
-                justify-center
-                md:text-5xl
-                font-bold
-                pt-1
-                pb-10
-                bg-gradient-to-r
-                from-purple-400
-                to-blue-800
-                bg-clip-text
-                text-transparent
-
-                
-                
-                "
-        >
+      <div className="mb-2 flex-col items-center justify-center bg-blue-50 p-8 md:mb-12">
+        <div className="flex justify-center bg-gradient-to-r from-purple-400 to-blue-800 bg-clip-text pb-10 pt-1 text-3xl font-bold text-transparent md:text-5xl">
           Product Features
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 p-4 md:grid  lg:grid-cols-4 gap-4 xl:px-40">
+        <div className="grid grid-cols-1 gap-4 p-4 md:grid md:grid-cols-2 lg:grid-cols-4 xl:px-40">
           {features.map((feature, index) => (
             <FeatureCard key={index} feature={feature} />
           ))}
