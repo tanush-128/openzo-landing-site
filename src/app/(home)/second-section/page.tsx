@@ -49,18 +49,19 @@ const SecondSection = () => {
       <div className="flex flex-col items-center justify-center pb-10 lg:flex-row">
         <div className="justify-center p-5 lg:w-1/2">
           <div className="txt-grad pb-4 text-4xl font-bold text-transparent md:pb-10 md:text-6xl">
-            OPENZO USER APP
+            OPENZO APP
           </div>
 
           <div className="mb-8 text-lg md:text-2xl">
-            Openzo user app is an all in one local commerce app where people can
-            discover all the products and services available in their locality.
-            Users have access to convenience of getting products delivered to
-            home from local stores and restaurants at unbeatable prices. Users
-            also have access to our P2P Marketplace features.
+            Openzo is a one-stop local convenience platform for all your needs.
+            With Openzo, users can order products, groceries, and food from
+            local stores and have them delivered instantly. Users can also find
+            home services, book appointments, and access almost everything they
+            need in a single app.
           </div>
           <div className="flex items-center gap-4">
             <Link
+              target="_blank"
               href={
                 "https://play.google.com/store/apps/details?id=in.openzo.openzo"
               }
@@ -75,10 +76,14 @@ const SecondSection = () => {
             </Link>
             {/* <button className="bg-kred text-white p-4 justify-center flex md:w-1/3 rounded-lg hover:bg-blue-600">
                 </button> */}
-            <button className="flex h-[55px] items-center justify-center gap-2 rounded-lg bg-kred px-2 text-white hover:bg-blue-600 md:p-4">
+            <Link
+              target="_blank"
+              href="https://openzo.in"
+              className="flex h-[55px] items-center justify-center gap-2 rounded-lg bg-kred px-2 text-white hover:bg-blue-600 md:p-4"
+            >
               <span>Web App</span>
               <ExternalLink size={24} />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -112,27 +117,21 @@ const SecondSection = () => {
 
 const FeatureCard = ({ feature }: { feature: Feature }) => {
   return (
-    <div className="flex-col space-y-6 pb-10 border p-8 rounded-xl items-center justify-center w-full hover:scale-105 transform transition-all duration-500 ease-in-out">
-      <div className="text-gray-600 text-3xl font-bold">
+    <div className="w-full transform flex-col items-center justify-center space-y-6 rounded-xl border p-8 pb-10 transition-all duration-500 ease-in-out hover:scale-105">
+      <div className="text-3xl font-bold text-gray-600">
         <Image
           src={feature.image}
           alt={feature.alt}
           width={300}
           height={300}
-          className="object-contain h-20 w-20 items-center justify-center flex mb-10"
+          className="mb-10 flex h-20 w-20 items-center justify-center object-contain"
         />
         <div>
-          <div
-            className="text-2xl pb-4 bg-gradient-to-t
-                                    from-black
-                                    to-gray-800
-                                    bg-clip-text
-                                    text-transparent"
-          >
+          <div className="bg-gradient-to-t from-black to-gray-800 bg-clip-text pb-4 text-2xl text-transparent">
             {feature.name}
           </div>
 
-          <div className="bg-gradient-to-r from-gray-800 to-gray-500 bg-clip-text text-transparent text-lg">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-500 bg-clip-text text-lg text-transparent">
             {feature.description}
           </div>
         </div>

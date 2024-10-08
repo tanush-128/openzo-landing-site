@@ -9,25 +9,35 @@ import FifthSection from "./fifth-section/page";
 import Footer from "./footer/page";
 
 import "./globals.css";
+import EarlyTraction from "./early-traction/page";
 
 export default function Home() {
   return (
     <div>
       <div className="">
-        <div className="parallax  bg-blend-overlay">
-          <div className="h-screen flex items-center justify-center bg-blend-multiply">
+        <div className="parallax bg-blend-overlay">
+          <Navbar />
+
+          <div className="flex h-screen items-center justify-center bg-blend-multiply">
             <FirstSection />
           </div>
         </div>
-        <div className="pt-16">
-          <Carousel />
+        <div className="">
+          <div className="traction bg-blend-overlay">
+            <div className="flex items-center justify-center bg-blend-multiply lg:h-screen">
+              <EarlyTraction />
+            </div>
+          </div>
+          {/* <Carousel /> */}
+
           <section id="user-app">
             <SecondSection />
           </section>
           <section id="business-app">
             <ThirdSection />
           </section>
-          <FourthSection />
+
+          {/* <FourthSection /> */}
           {/* <Pricing /> */}
           <FifthSection />
           <Footer />

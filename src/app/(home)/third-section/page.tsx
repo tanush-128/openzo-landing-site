@@ -56,6 +56,7 @@ const ThirdSection = () => {
           </div>
           <div className="mx-auto flex items-center gap-4">
             <Link
+              target="_blank"
               href={
                 "https://play.google.com/store/apps/details?id=in.openzo.OpenzoForBusiness"
               }
@@ -67,6 +68,13 @@ const ThirdSection = () => {
                 className="h-[72px] object-contain"
                 src={"/images/playstore.png"}
               />
+            </Link>
+            <Link
+              href={"https://forms.gle/V7gfC5u5mHmokEdA9"}
+              target="blank"
+              className="rounded-lg bg-kred px-3 py-3 text-white md:px-6"
+            >
+              Contact Us
             </Link>
             {/* <button className="bg-kred text-white p-4 justify-center flex md:w-1/3 rounded-lg hover:bg-blue-600">
                 </button> */}

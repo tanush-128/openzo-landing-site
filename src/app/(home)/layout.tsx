@@ -20,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className + " overflow-x-clip"}>
-        <Navbar />
 
         {children}
         {/* <div className="parallax"></div> */}

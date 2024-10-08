@@ -8,16 +8,10 @@ import { cn } from "@/lib/utils";
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
-
-import Logo from "./logo";
 
 const components: { title: string; description: string }[] = [
   {
@@ -60,17 +54,17 @@ const components: { title: string; description: string }[] = [
 export function NavigationMenuBar() {
   return (
     <NavigationMenu>
-      <NavigationMenuList className="hidden md:flex md:space-x-4 ">
+      <NavigationMenuList className="hidden md:flex md:space-x-4">
         <NavigationMenuItem>
           <Link href="#business-app" legacyBehavior passHref>
-            <NavigationMenuLink className="font-medium">
+            <NavigationMenuLink className="text-lg font-medium">
               Business App
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="#user-app" legacyBehavior passHref>
-            <NavigationMenuLink className="font-medium">
+            <NavigationMenuLink className="text-lg font-medium">
               User App
             </NavigationMenuLink>
           </Link>
@@ -102,7 +96,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >
