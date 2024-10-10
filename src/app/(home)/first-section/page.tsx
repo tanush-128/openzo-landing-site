@@ -5,12 +5,11 @@ const FirstSection = () => {
     <section className="from gray-00 spacey-10 bg-gradient-to-r to-gray-200 py-10 md:py-20">
       <div className="container mx-auto text-center">
         <div className="flex justify-center bg-gradient-to-r from-white to-white bg-clip-text pb-10 text-6xl font-bold text-transparent md:px-20 md:text-8xl">
-          All in one Local Commerce Platform
+          The Local Convenience Platform
         </div>
 
         <p className="md-10 bg-gradient-to-r from-white to-white bg-clip-text text-lg font-bold text-transparent md:text-2xl">
-          Digitising Local Businesses and enabling Local Commerce.
-          <br /> One stop platform for all local needs of customers.
+          enabling digital commerce for local businesses
         </p>
         <div className="flex justify-center gap-4 pt-10">
           <Link
